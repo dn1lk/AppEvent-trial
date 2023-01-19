@@ -17,7 +17,7 @@ def posts(request: HttpRequest) -> HttpResponse:
         """
 
         if kwargs:
-            raise TypeError(f"Получен неизвестный параметр: {list(kwargs)}")
+            raise TypeError(f"Получен неизвестный параметр: {list(kwargs)}.")
         offset, limit = check_offset_and_limit(offset, limit)
 
         if order:
