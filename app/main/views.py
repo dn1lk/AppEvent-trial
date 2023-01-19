@@ -32,6 +32,7 @@ def posts(request: HttpRequest) -> HttpResponse:
             stories = models.Posts.objects.all()
 
         return JsonResponse(list(stories[offset:limit].values()), safe=False, json_dumps_params={'indent': 2})
+
     try:
         return get_response(**request.GET.dict())
     except TypeError as e:
