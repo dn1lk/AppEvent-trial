@@ -26,6 +26,6 @@ def check_offset_and_limit(offset: str | int = None, limit: str | int = None) ->
         if offset >= limit:
             raise TypeError('Параметр "offset" больше или равен параметру "limit".')
         if limit - offset > 30:
-            raise TypeError('Превышен лимит. Необходимо увеличить параметр "offset" или уменьшить параметр "limit"')
+            raise TypeError('Превышен лимит. Необходимо увеличить параметр "offset" или уменьшить параметр "limit".')
 
     return offset, limit
